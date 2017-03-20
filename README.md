@@ -1,3 +1,5 @@
 # docker-dev-images
 
-Some modified dockerfiles to use in dev environment
+Some customized dockerfiles to be used on development environments:
+
+* [MongoDB](./mongodb/README.md)
