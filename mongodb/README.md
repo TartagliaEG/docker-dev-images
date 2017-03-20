@@ -1,7 +1,7 @@
 # Mongo Docker
 
 ##### About
-The oficial mongodb image runs without any authentication enabled, so the [this custom entrypoint shell](./custom_entrypoint.sh) was made to enforce the --auth arg and to execute [this script](./first_mongo_run.js) a startup script on first run. 
+The oficial mongodb image runs without any authentication enabled, so the [this custom entrypoint shell](./custom_entrypoint.sh) was made to enforce the --auth arg and to execute [this script](./first_mongo_run.js) on the first run. 
 By default the [first\_mongo\_run.js](./first_mongo_run.js) script creates two accounts, the admin and the dev, but you could add any valid mongo command there. 
 
 ##### Dockerfile
@@ -15,7 +15,7 @@ $ docker run -d -p 27017:27017 --name dev_mongo --rm -v /full/path/to/this/folde
 ```
 
 
-You could access the mongodb cli by typing:
+Acessing the mongo cli:
 ```bash
 $ docker exec -it dev_mongo sh -c "mongo <?database> -u <?username> -p <?password> --port <?port>"
 
@@ -23,5 +23,6 @@ $ docker exec -it dev_mongo sh -c "mongo <?database> -u <?username> -p <?passwor
 ```
 
 ##### Notes
-For more information about the official mongo image click [here](https://hub.docker.com/_/mongo/)
-The custom entrypoint shell script was based on [this](https://github.com/frodenas/docker-mongodb)
+For more information about the official mongo image click [here](https://hub.docker.com/_/mongo/).
+
+The custom entrypoint shell script was based on [this](https://github.com/frodenas/docker-mongodb).
